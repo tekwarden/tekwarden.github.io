@@ -1,216 +1,597 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
-  <!-- Site made with Mobirise Website Builder v5.2.0, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo-size.jpeg" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tekwarden — Global IT. Reimagined.</title>
+<meta name="description" content="Tekwarden — Global IT consulting, infrastructure, cloud, security, and managed services. Enterprise-grade. Future-proof. 24x7." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --navy:#0B1E3F; --navy-2:#0a1731; --navy-3:#13284f;
+  --gold:#D4AF37; --gold-soft:#e7c869;
+  --teal:#1ABC9C; --teal-soft:#3fd8b8;
+  --wa:#25D366;
+  --white:#fff; --light:#f5f5f7;
+  --gray:#6b7280;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(11,30,63,0.12);
+  --shadow-lg:0 20px 60px rgba(11,30,63,0.18);
+  --gradient:linear-gradient(135deg,#0B1E3F 0%,#13284f 50%,#1ABC9C 200%);
+  --gold-gradient:linear-gradient(135deg,#D4AF37,#e7c869);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;color:var(--navy);background:#fff;line-height:1.65;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+h1,h2,h3,h4{font-family:'Space Grotesk','Plus Jakarta Sans',sans-serif;font-weight:700;line-height:1.2;letter-spacing:-0.02em;}
+.container{width:min(1200px,92%);margin-inline:auto;}
+
+/* NAV */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .35s ease;}
+.navbar.scrolled{background:rgba(11,30,63,0.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;box-shadow:0 4px 20px rgba(0,0,0,.15);border-bottom:1px solid rgba(255,255,255,.06);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;letter-spacing:.5px;display:flex;align-items:center;gap:10px;}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:var(--gold-gradient);display:grid;place-items:center;color:var(--navy);font-weight:800;font-size:1.05rem;box-shadow:0 6px 18px rgba(212,175,55,.35);}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{color:rgba(255,255,255,.85);font-weight:500;font-size:.95rem;position:relative;transition:color .25s;}
+.nav-links a:hover{color:var(--gold-soft);}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .3s;}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{background:var(--gold-gradient);color:var(--navy)!important;padding:10px 18px;border-radius:10px;font-weight:600;box-shadow:0 6px 16px rgba(212,175,55,.3);}
+.nav-cta:hover{transform:translateY(-2px);}
+.nav-cta::after{display:none;}
+.hamburger{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer;}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;background:radial-gradient(1200px 600px at 80% -10%, rgba(26,188,156,.18), transparent 60%),radial-gradient(900px 600px at 10% 110%, rgba(212,175,55,.18), transparent 60%),linear-gradient(135deg,#0a1731 0%,#0B1E3F 60%,#13284f 100%);color:#fff;display:flex;align-items:center;overflow:hidden;padding:120px 0 80px;}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px;opacity:.4;pointer-events:none;}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.6;animation:float 14s ease-in-out infinite;pointer-events:none;}
+.orb.one{width:380px;height:380px;background:#1ABC9C;top:-100px;right:-80px;}
+.orb.two{width:480px;height:480px;background:#D4AF37;bottom:-160px;left:-140px;animation-delay:-6s;}
+.orb.three{width:260px;height:260px;background:#3fd8b8;top:40%;left:50%;animation-delay:-3s;opacity:.3;}
+@keyframes float{0%,100%{transform:translateY(0) translateX(0);}50%{transform:translateY(-30px) translateX(20px);}}
+.hero-content{position:relative;z-index:2;max-width:880px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:.85rem;font-weight:500;margin-bottom:24px;backdrop-filter:blur(8px);}
+.hero-badge i{color:var(--gold);}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);margin-bottom:24px;}
+.hero h1 .accent{background:var(--gold-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p.lead{font-size:clamp(1rem,1.4vw,1.2rem);color:rgba(255,255,255,.78);max-width:680px;margin-bottom:40px;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:12px;font-weight:600;font-size:.95rem;transition:all .3s;cursor:pointer;border:0;}
+.btn-primary{background:var(--gold-gradient);color:var(--navy);box-shadow:0 12px 30px rgba(212,175,55,.35);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(212,175,55,.45);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:#fff;}
+.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:.85rem;display:flex;flex-direction:column;align-items:center;gap:8px;animation:bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
+
+/* STATS */
+.stats{background:#fff;padding:80px 0;position:relative;margin-top:-60px;z-index:5;}
+.stats-inner{background:#fff;border-radius:24px;box-shadow:var(--shadow-lg);padding:50px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat{text-align:center;border-right:1px solid #eef0f3;padding:10px 14px;}
+.stat:last-child{border-right:0;}
+.stat .num{font-family:'Space Grotesk',sans-serif;font-size:2.6rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.stat .label{color:var(--gray);font-weight:500;margin-top:4px;font-size:.95rem;}
+
+/* SECTION GENERIC */
+section.block{padding:100px 0;}
+.section-head{text-align:center;max-width:760px;margin:0 auto 60px;}
+.section-head .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
+.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:14px;color:var(--navy);}
+.section-head p{color:var(--gray);font-size:1.05rem;}
+
+/* ABOUT */
+.about{background:var(--light);}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;}
+.about-text h2{font-size:clamp(1.8rem,2.6vw,2.4rem);color:var(--navy);margin-bottom:18px;}
+.about-text p{color:#4b5563;margin-bottom:16px;font-size:1.05rem;}
+.about-points{margin-top:24px;display:grid;gap:14px;}
+.about-points li{display:flex;align-items:flex-start;gap:12px;color:#374151;}
+.about-points i{color:var(--teal);background:rgba(26,188,156,.1);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex-shrink:0;}
+.about-visual{position:relative;border-radius:24px;overflow:hidden;background:var(--gradient);padding:50px;color:#fff;box-shadow:var(--shadow-lg);}
+.about-visual h3{font-size:1.5rem;margin-bottom:18px;}
+.about-visual p{color:rgba(255,255,255,.85);}
+.about-visual .badge{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 14px;font-size:.8rem;font-weight:600;backdrop-filter:blur(8px);}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.feature-card{background:#fff;border-radius:var(--radius);padding:32px 26px;border:1px solid #eef0f3;transition:all .35s;position:relative;overflow:hidden;}
+.feature-card::before{content:"";position:absolute;inset:0;background:var(--gradient);opacity:0;transition:opacity .35s;z-index:0;}
+.feature-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:transparent;}
+.feature-card:hover::before{opacity:1;}
+.feature-card:hover *{color:#fff !important;position:relative;z-index:1;}
+.feature-card .icon{width:56px;height:56px;border-radius:14px;background:rgba(26,188,156,.1);color:var(--teal);display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px;transition:all .35s;position:relative;z-index:1;}
+.feature-card:hover .icon{background:rgba(255,255,255,.18);color:#fff;}
+.feature-card h3{font-size:1.15rem;color:var(--navy);margin-bottom:10px;position:relative;z-index:1;}
+.feature-card p{color:var(--gray);font-size:.95rem;position:relative;z-index:1;}
+
+/* SERVICES */
+.services{background:var(--light);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.svc-card{background:#fff;border-radius:var(--radius);padding:30px;border:1px solid #eef0f3;position:relative;overflow:hidden;transition:all .35s;}
+.svc-card::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;background:var(--gold-gradient);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.svc-card:hover::after{transform:scaleX(1);}
+.svc-card .svc-icon{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;font-size:1.35rem;background:linear-gradient(135deg,rgba(11,30,63,.06),rgba(26,188,156,.10));color:var(--navy);margin-bottom:18px;}
+.svc-card h3{font-size:1.1rem;color:var(--navy);margin-bottom:10px;}
+.svc-card p{color:var(--gray);font-size:.95rem;}
+.svc-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:10px;}
+
+/* GLOBAL DELIVERY */
+.delivery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.region-card{background:var(--gradient);color:#fff;border-radius:var(--radius);padding:36px;position:relative;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s;}
+.region-card:hover{transform:translateY(-6px);}
+.region-card::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(212,175,55,.18);}
+.region-card .flag{font-size:1.6rem;margin-bottom:14px;color:var(--gold-soft);}
+.region-card h3{font-size:1.4rem;margin-bottom:10px;}
+.region-card ul{margin-top:14px;display:grid;gap:8px;}
+.region-card li{color:rgba(255,255,255,.85);font-size:.95rem;display:flex;gap:10px;align-items:center;}
+.region-card li i{color:var(--gold);}
+.fts-banner{margin-top:40px;text-align:center;padding:30px;border-radius:var(--radius);background:#fff;border:1px dashed #d6d9df;color:var(--navy);}
+.fts-banner i{color:var(--gold);margin-right:8px;}
+
+/* LEADERSHIP */
+.leadership{background:var(--light);}
+.leader-card{max-width:880px;margin:0 auto;background:#fff;border-radius:24px;box-shadow:var(--shadow-lg);display:grid;grid-template-columns:280px 1fr;overflow:hidden;}
+.leader-photo{background:var(--gradient);padding:30px;display:flex;align-items:center;justify-content:center;position:relative;}
+.leader-photo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, rgba(212,175,55,.3), transparent 60%);pointer-events:none;}
+.leader-photo img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.2);box-shadow:0 12px 30px rgba(0,0,0,.25);position:relative;z-index:1;}
+.leader-info{padding:36px;}
+.leader-info .role{color:var(--teal);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;}
+.leader-info h3{font-size:1.7rem;color:var(--navy);margin-bottom:6px;}
+.leader-info .title{color:var(--gold);font-weight:600;margin-bottom:18px;}
+.leader-info p{color:#4b5563;margin-bottom:18px;}
+.leader-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;}
+.leader-meta a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;background:#f5f5f7;color:var(--navy);font-weight:600;font-size:.9rem;transition:all .3s;}
+.leader-meta a:hover{background:var(--navy);color:#fff;transform:translateY(-2px);}
+.leader-meta a.wa:hover{background:var(--wa);color:#fff;}
+
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch;}
+.contact-info{background:var(--gradient);color:#fff;border-radius:var(--radius);padding:40px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);}
+.contact-info::before{content:"";position:absolute;bottom:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(212,175,55,.15);}
+.contact-info h3{font-size:1.5rem;margin-bottom:14px;position:relative;}
+.contact-info p{color:rgba(255,255,255,.8);margin-bottom:30px;position:relative;}
+.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;position:relative;}
+.contact-item i{width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:var(--gold);flex-shrink:0;}
+.contact-item span{color:rgba(255,255,255,.88);font-size:.95rem;}
+.contact-item a{color:#fff;font-weight:500;}
+.contact-item a:hover{color:var(--gold-soft);}
+
+.phone-panel{background:#fff;border-radius:var(--radius);padding:36px;border:1px solid #eef0f3;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px;}
+.phone-head h3{color:var(--navy);font-size:1.4rem;margin-bottom:6px;}
+.phone-head p{color:var(--gray);font-size:.95rem;}
+.phone-card{border:1px solid #eef0f3;border-radius:14px;padding:20px;background:#fafbfc;transition:all .3s;}
+.phone-card:hover{border-color:var(--teal);box-shadow:0 10px 26px rgba(11,30,63,.08);transform:translateY(-2px);background:#fff;}
+.phone-top{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.phone-flag{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(11,30,63,.08),rgba(26,188,156,.12));color:var(--navy);display:grid;place-items:center;font-size:1.25rem;flex-shrink:0;}
+.phone-meta{display:flex;flex-direction:column;}
+.phone-region{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:4px;}
+.phone-number{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:700;color:var(--navy);letter-spacing:.5px;}
+.phone-number:hover{color:var(--gold);}
+.phone-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.phone-btn{flex:1;min-width:140px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:10px;font-weight:600;font-size:.92rem;transition:all .3s;}
+.phone-btn.call{background:var(--navy);color:#fff;}
+.phone-btn.call:hover{background:#13284f;transform:translateY(-2px);}
+.phone-btn.whatsapp{background:var(--wa);color:#fff;box-shadow:0 8px 18px rgba(37,211,102,.25);}
+.phone-btn.whatsapp:hover{background:#1ebd5b;transform:translateY(-2px);box-shadow:0 12px 24px rgba(37,211,102,.35);}
+.phone-note{margin-top:6px;padding:14px 16px;border-radius:10px;background:rgba(37,211,102,.08);color:#0f7a3d;font-size:.9rem;font-weight:500;display:flex;align-items:center;gap:8px;}
+.phone-note i{color:var(--wa);font-size:1.05rem;}
+
+/* FOOTER */
+footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+.foot-grid h4{color:#fff;font-size:1rem;margin-bottom:18px;}
+.foot-grid p,.foot-grid li{font-size:.93rem;color:rgba(255,255,255,.65);}
+.foot-grid li{margin-bottom:10px;}
+.foot-grid li a:hover{color:var(--gold-soft);}
+.foot-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.4rem;margin-bottom:14px;font-family:'Space Grotesk';}
+.socials{display:flex;gap:10px;margin-top:18px;}
+.socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:#fff;transition:all .3s;}
+.socials a:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);}
+.socials a.wa:hover{background:var(--wa);color:#fff;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:.85rem;color:rgba(255,255,255,.55);}
+
+/* FLOATING WHATSAPP */
+.fab-wa{position:fixed;bottom:24px;right:24px;z-index:900;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;font-size:1.7rem;display:grid;place-items:center;box-shadow:0 14px 30px rgba(37,211,102,.45);transition:all .3s;}
+.fab-wa:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 18px 36px rgba(37,211,102,.55);}
+.fab-wa::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,.45);animation:pulse 2.2s ease-out infinite;}
+@keyframes pulse{0%{transform:scale(.9);opacity:.8;}100%{transform:scale(1.4);opacity:0;}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media (max-width: 992px){
+  .nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:340px;height:100vh;background:var(--navy);padding:90px 30px 30px;flex-direction:column;align-items:flex-start;gap:20px;transition:right .35s ease;box-shadow:-10px 0 30px rgba(0,0,0,.3);}
+  .nav-links.open{right:0;}
+  .hamburger{display:block;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .stat{border-right:0;}
+  .about-grid,.contact-wrap{grid-template-columns:1fr;gap:40px;}
+  .why-grid{grid-template-columns:repeat(2,1fr);}
+  .services-grid,.delivery-grid{grid-template-columns:repeat(2,1fr);}
+  .leader-card{grid-template-columns:1fr;}
+  .leader-photo{padding:40px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width: 600px){
+  .why-grid,.services-grid,.delivery-grid{grid-template-columns:1fr;}
+  .stats-inner{grid-template-columns:1fr 1fr;padding:30px 20px;}
+  .foot-grid{grid-template-columns:1fr;}
+  section.block{padding:70px 0;}
+  .leader-info{padding:26px;}
+  .phone-btn{min-width:0;flex:1;}
+  .fab-wa{width:52px;height:52px;font-size:1.5rem;bottom:18px;right:18px;}
+}
+</style>
 </head>
 <body>
-  
-  <section class="menu menu1 cid-sgqsdSSjyF" once="menu" id="menu1-0">
-    
 
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://mobiri.se">
-                        <img src="assets/images/logo-size.jpeg" alt="Mobirise" style="height: 5.4rem;">
-                    </a>
-                </span>
-                
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#header3-1" aria-expanded="true">
-                            About us</a></li>
-                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#features2-2">
-                            Services</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#team1-3">
-                            Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="mailto:hello@tekwarden.com">Contacts</a>
-                    </li></ul>
-                
-                
-            </div>
-        </div>
-    </nav>
+<!-- NAV -->
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#home" class="logo" aria-label="Tekwarden home">
+      <span class="logo-mark">TW</span><span>Tekwarden</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#delivery">Global</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <div class="container hero-content">
+    <span class="hero-badge"><i class="fa-solid fa-globe"></i> Global IT Partner • USA · Europe · Asia</span>
+    <h1>Global IT.<br/><span class="accent">Reimagined.</span></h1>
+    <p class="lead">Tekwarden delivers enterprise-grade IT consulting, global infrastructure, cloud, security, and 24×7 managed services — engineered to be innovative, budget-friendly, and future-proof.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-primary">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><i class="fa-solid fa-chevron-down"></i></div>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-inner reveal">
+      <div class="stat"><div class="num" data-count="50">0</div><div class="label">Enterprise Clients</div></div>
+      <div class="stat"><div class="num" data-count="15">0</div><div class="label">Countries Served</div></div>
+      <div class="stat"><div class="num" data-count="24">0</div><div class="label">Hours Support</div></div>
+      <div class="stat"><div class="num" data-count="3">0</div><div class="label">Global Regions</div></div>
+    </div>
+  </div>
 </section>
 
-<section class="header3 cid-sgqshMEo0V mbr-fullscreen mbr-parallax-background" id="header3-1">
-
-    
-
-    
-
-    <div class="align-center container">
-        <div class="row justify-content-end">
-            <div class="col-12 col-lg-6">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Tekwarden</strong></h1>
-                
-                <p class="mbr-text mbr-fonts-style display-7"><em>Your Tech Warden</em></p>
-                
-            </div>
-        </div>
+<!-- ABOUT -->
+<section class="block about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span style="display:inline-block;color:var(--teal);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px;">About Tekwarden</span>
+        <h2>Your one-stop partner for global IT excellence.</h2>
+        <p>Tekwarden is a global IT consulting and services firm specialising in end-to-end, innovative, and future-proof technology solutions. We empower organisations to operate efficiently, securely, and at scale across the globe.</p>
+        <p>From strategy and consulting to global infrastructure ownership across <strong>USA, Europe, and Asia</strong>, we deliver enterprise-grade reliability backed by 24×7 follow-the-sun managed services.</p>
+        <ul class="about-points">
+          <li><i class="fa-solid fa-check"></i> End-to-end IT consulting &amp; advisory</li>
+          <li><i class="fa-solid fa-check"></i> Global infrastructure across multi-region data centres</li>
+          <li><i class="fa-solid fa-check"></i> CISO &amp; IT Leadership as a Service</li>
+          <li><i class="fa-solid fa-check"></i> 24×7 enterprise-grade managed services</li>
+        </ul>
+      </div>
+      <div class="about-visual reveal">
+        <span class="badge">Trusted Globally</span>
+        <h3>Future-Proof. Cost-Effective. Enterprise Grade.</h3>
+        <p>We engineer technology ecosystems that scale with your business, reduce operational risk, and unlock measurable ROI — without the executive headcount overhead.</p>
+        <ul class="about-points" style="margin-top:24px;">
+          <li><i class="fa-solid fa-bolt" style="color:var(--gold);background:rgba(212,175,55,.15);"></i><span style="color:rgba(255,255,255,.85);">Innovative, scalable architectures</span></li>
+          <li><i class="fa-solid fa-shield-halved" style="color:var(--gold);background:rgba(212,175,55,.15);"></i><span style="color:rgba(255,255,255,.85);">Security-first design philosophy</span></li>
+          <li><i class="fa-solid fa-earth-americas" style="color:var(--gold);background:rgba(212,175,55,.15);"></i><span style="color:rgba(255,255,255,.85);">Global delivery, local accountability</span></li>
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="features1 cid-sgqslOLAgU mbr-parallax-background" id="features2-2">
-
-    
-
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);">
+<!-- WHY -->
+<section class="block" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Tekwarden</span>
+      <h2>Built for enterprises. Loved by leaders.</h2>
+      <p>Four reasons global organisations choose us as their long-term IT partner.</p>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont socicon-buffer socicon"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong>Infrastructure</strong><br></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont socicon-github socicon"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Development</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont socicon-wix socicon"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Security</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont socicon-googlegroups socicon"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong>Consultancy</strong></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="why-grid">
+      <div class="feature-card reveal"><div class="icon"><i class="fa-solid fa-sack-dollar"></i></div><h3>Budget-Friendly</h3><p>Optimised TCO and maximum ROI without compromising on quality, security, or performance.</p></div>
+      <div class="feature-card reveal"><div class="icon"><i class="fa-solid fa-rocket"></i></div><h3>Future-Proof</h3><p>Architectures and solutions designed to scale with you for the next decade — not the next quarter.</p></div>
+      <div class="feature-card reveal"><div class="icon"><i class="fa-solid fa-globe"></i></div><h3>Globally Scalable</h3><p>Multi-region infrastructure and global delivery footprint across the Americas, EMEA, and APAC.</p></div>
+      <div class="feature-card reveal"><div class="icon"><i class="fa-solid fa-headset"></i></div><h3>24×7 Support</h3><p>Follow-the-sun operations with SLA-driven monitoring, response, and resolution.</p></div>
     </div>
+  </div>
 </section>
 
-<section class="team1 cid-sgqsqgO2jS mbr-parallax-background" id="team1-3">
-    
-
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);">
+<!-- SERVICES -->
+<section class="block services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Services &amp; Solutions</span>
+      <h2>Everything under the sun in IT.</h2>
+      <p>A complete portfolio of consulting, infrastructure, cloud, security, and leadership services.</p>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
-                    <strong>Our team</strong>
-                </h3>
-                
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="card-wrap">
-                    <div class="image-wrap">
-                        <img src="assets/images/mypicture-croped.jpeg" alt="">
-                    </div>
-                    <div class="content-wrap">
-                        <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-7">
-                            <strong>Dasun K Lokuhetty</strong></h5>
-                        <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                            <strong>Founder /Director</strong></h6>
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="card-wrap">
-                    <div class="image-wrap">
-                        <img src="assets/images/suenth-4.jpeg" alt="">
-                    </div>
-                    <div class="content-wrap">
-                        <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-7"><strong>Suneth S Edirisinghe</strong></h5>
-                        <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4"><strong>Founder /Director</strong></h6>
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="card-wrap">
-                    <div class="image-wrap">
-                        <img src="assets/images/pulasthi.jpeg" alt="">
-                    </div>
-                    <div class="content-wrap">
-                        <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-7">
-                            <strong>Pulasthi C Batuwita</strong></h5>
-                        <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4"><strong>Founder /Director</strong></h6>
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
+    <div class="services-grid">
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-lightbulb"></i></div><span class="svc-tag">Consulting</span><h3>IT Consulting &amp; Advisory</h3><p>Strategy, roadmap, enterprise architecture, and digital transformation advisory.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-server"></i></div><span class="svc-tag">Global</span><h3>Global Infrastructure</h3><p>Multi-region data centres across USA, Europe, and Asia with geo-redundancy.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-network-wired"></i></div><span class="svc-tag">Infrastructure</span><h3>IT Infrastructure Services</h3><p>Data centres, networks, compute, storage, virtualisation, and DR.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-cloud"></i></div><span class="svc-tag">Cloud</span><h3>Cloud Services</h3><p>Cloud strategy, migration, and optimisation across AWS, Azure, and GCP.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-gears"></i></div><span class="svc-tag">24×7</span><h3>Managed Services</h3><p>Proactive monitoring, incident, problem, change, and capacity management.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-shield-halved"></i></div><span class="svc-tag">Security</span><h3>IT Security Services</h3><p>Monitoring, vulnerability management, EDR/MDR, IAM, and compliance advisory.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-user-shield"></i></div><span class="svc-tag">Leadership</span><h3>CISO as a Service</h3><p>On-demand senior security leadership, governance, and board-level advisory.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-user-tie"></i></div><span class="svc-tag">Leadership</span><h3>IT Leadership as a Service</h3><p>vCIO / vCTO services to lead strategy, transformation, and governance.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-bag-shopping"></i></div><span class="svc-tag">Digital</span><h3>E-commerce Solutions</h3><p>Mature, ready-to-deploy commerce platforms with full lifecycle support.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon"><i class="fa-solid fa-code"></i></div><span class="svc-tag">Development</span><h3>Application Development</h3><p>Custom apps, APIs, microservices, automation, and DevOps enablement.</p></div>
     </div>
+  </div>
 </section>
 
-<section class="footer3 cid-sgqsw1q6kM" once="footers" id="footer3-4">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            
-            
-            <div class="row row-copirayt">
-                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                    © Copyright 2016 Tekwarden.com. All Rights Reserved.
-                </p>
-            </div>
-        </div>
+<!-- DELIVERY -->
+<section class="block" id="delivery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Global Delivery</span>
+      <h2>Three regions. One seamless service.</h2>
+      <p>Follow-the-sun operations across multi-region data centres ensure continuous availability and rapid response.</p>
     </div>
-</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/m" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/t" style="color:#aaa;">Created</a> with Mobirise css site template</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
+    <div class="delivery-grid">
+      <div class="region-card reveal">
+        <div class="flag"><i class="fa-solid fa-earth-americas"></i></div>
+        <h3>Americas</h3>
+        <p style="color:rgba(255,255,255,.85);">USA-based data centres and operations supporting North &amp; South American clients.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Data centre presence in the USA</li>
+          <li><i class="fa-solid fa-check"></i> Regional managed services</li>
+          <li><i class="fa-solid fa-check"></i> Compliance-aligned operations</li>
+        </ul>
+      </div>
+      <div class="region-card reveal">
+        <div class="flag"><i class="fa-solid fa-earth-europe"></i></div>
+        <h3>EMEA</h3>
+        <p style="color:rgba(255,255,255,.85);">European hubs delivering enterprise hosting, security, and managed services.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> EU data centre footprint</li>
+          <li><i class="fa-solid fa-check"></i> GDPR-aligned operations</li>
+          <li><i class="fa-solid fa-check"></i> Regional advisory &amp; support</li>
+        </ul>
+      </div>
+      <div class="region-card reveal">
+        <div class="flag"><i class="fa-solid fa-earth-asia"></i></div>
+        <h3>APAC</h3>
+        <p style="color:rgba(255,255,255,.85);">Asia-based delivery centres providing 24×7 operations and follow-the-sun coverage.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> APAC data centre presence</li>
+          <li><i class="fa-solid fa-check"></i> 24×7 operational hub</li>
+          <li><i class="fa-solid fa-check"></i> Cost-optimised delivery</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fts-banner reveal">
+      <i class="fa-solid fa-sun"></i>
+      <strong>Follow-the-sun coverage</strong> — your IT never sleeps. Seamless handoffs between Americas, EMEA, and APAC ensure continuous service.
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="block leadership" id="leadership">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Leadership</span>
+      <h2>Led by experienced industry professionals.</h2>
+      <p>Meet the leadership driving Tekwarden's global delivery and client outcomes.</p>
+    </div>
+    <div class="leader-card reveal">
+      <div class="leader-photo">
+        <img src="ProfilePic-DasunLokuhetty.jpg" alt="Dasun Lokuhetty - General Manager, Tekwarden" />
+      </div>
+      <div class="leader-info">
+        <div class="role">General Management</div>
+        <h3>Dasun Lokuhetty</h3>
+        <div class="title">General Manager · Tekwarden</div>
+        <p>A senior IT leader with deep expertise across enterprise infrastructure, cloud, cyber security operations, and incident response. Dasun drives Tekwarden's global service delivery, partnering with clients across the Americas, EMEA, and APAC to build resilient, future-proof technology ecosystems.</p>
+        <p>Based in Dublin, Ireland, with a global remit across all Tekwarden delivery regions.</p>
+        <div class="leader-meta">
+          <a href="mailto:dasun.lokuhetty@telwarden.com" aria-label="Email Dasun Lokuhetty"><i class="fa-solid fa-envelope"></i> dasun.lokuhetty@telwarden.com</a>
+          <a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp Dasun"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="#contact" aria-label="Contact Dasun"><i class="fa-solid fa-comments"></i> Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (info + phones + WhatsApp, NO form) -->
+<section class="block" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact Us</span>
+      <h2>Let's build something exceptional together.</h2>
+      <p>Reach out anytime — by email, phone, or WhatsApp. Our team is available around the clock across the globe.</p>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <h3>Get in touch</h3>
+        <p>Speak with our leadership directly. We respond within one business day — and instantly on WhatsApp.</p>
+        <div class="contact-item"><i class="fa-solid fa-user-tie"></i><div><div style="font-weight:600;color:#fff;">Dasun Lokuhetty</div><span>General Manager</span></div></div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><div style="font-weight:600;color:#fff;">Email</div><a href="mailto:dasun.lokuhetty@telwarden.com">dasun.lokuhetty@telwarden.com</a></div></div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><div style="font-weight:600;color:#fff;">Headquarters</div><span>Dublin, Ireland</span></div></div>
+        <div class="contact-item"><i class="fa-solid fa-globe"></i><div><div style="font-weight:600;color:#fff;">Global Offices</div><span>USA · Europe · Asia</span></div></div>
+        <div class="contact-item"><i class="fa-solid fa-clock"></i><div><div style="font-weight:600;color:#fff;">Support</div><span>24×7 · Follow-the-sun</span></div></div>
+      </div>
+
+      <div class="phone-panel reveal">
+        <div class="phone-head">
+          <h3>Call or WhatsApp Us</h3>
+          <p>Reach our leadership directly across two regions.</p>
+        </div>
+
+        <div class="phone-card">
+          <div class="phone-top">
+            <div class="phone-flag"><i class="fa-solid fa-earth-europe"></i></div>
+            <div class="phone-meta">
+              <span class="phone-region">Ireland</span>
+              <a href="tel:+353857827144" class="phone-number">+353 85 782 7144</a>
+            </div>
+          </div>
+          <div class="phone-actions">
+            <a href="tel:+353857827144" class="phone-btn call"><i class="fa-solid fa-phone"></i> Call</a>
+            <a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="phone-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="phone-card">
+          <div class="phone-top">
+            <div class="phone-flag"><i class="fa-solid fa-earth-asia"></i></div>
+            <div class="phone-meta">
+              <span class="phone-region">Sri Lanka</span>
+              <a href="tel:+94786294688" class="phone-number">+94 78 629 4688</a>
+            </div>
+          </div>
+          <div class="phone-actions">
+            <a href="tel:+94786294688" class="phone-btn call"><i class="fa-solid fa-phone"></i> Call</a>
+            <a href="https://wa.me/94786294688" target="_blank" rel="noopener" class="phone-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="phone-note"><i class="fa-brands fa-whatsapp"></i> Tap WhatsApp to start a secure chat instantly — available 24×7.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><span class="logo-mark">TW</span> Tekwarden</div>
+        <p>Global IT consulting, infrastructure, cloud, security, and managed services — engineered for the enterprise.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:dasun.lokuhetty@telwarden.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">IT Consulting</a></li>
+          <li><a href="#services">Global Infrastructure</a></li>
+          <li><a href="#services">Cloud Services</a></li>
+          <li><a href="#services">Managed Services</a></li>
+          <li><a href="#services">IT Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Leadership</h4>
+        <ul>
+          <li><a href="#services">CISO as a Service</a></li>
+          <li><a href="#services">vCIO / vCTO</a></li>
+          <li><a href="#services">E-commerce</a></li>
+          <li><a href="#services">App Development</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Dublin, Ireland</li>
+          <li>USA · Europe · Asia</li>
+          <li><a href="mailto:dasun.lokuhetty@telwarden.com">dasun.lokuhetty@telwarden.com</a></li>
+          <li><a href="tel:+353857827144">+353 85 782 7144</a></li>
+          <li><a href="tel:+94786294688">+94 78 629 4688</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> Tekwarden. All rights reserved. · Global IT. Reimagined.</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="fab-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  const open = navLinks.classList.contains('open');
+  hamburger.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const counters = document.querySelectorAll('.num');
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.count, 10);
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 50));
+    const tick = () => {
+      current += step;
+      if (current >= target) {
+        if (target === 24) el.textContent = '24×7';
+        else el.textContent = target + '+';
+      } else {
+        el.textContent = current;
+        requestAnimationFrame(tick);
+      }
+    };
+    tick();
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.4 });
+counters.forEach(c => counterObs.observe(c));
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
