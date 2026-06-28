@@ -14,7 +14,7 @@
   --navy:#0B1E3F; --navy-2:#0a1731; --navy-3:#13284f;
   --gold:#D4AF37; --gold-soft:#e7c869;
   --teal:#1ABC9C; --teal-soft:#3fd8b8;
-  --wa:#25D366;
+  --wa:#25D366; --wa-dark:#1ebd5b;
   --white:#fff; --light:#f5f5f7;
   --gray:#6b7280;
   --radius:18px;
@@ -148,7 +148,7 @@ section.block{padding:100px 0;}
 .leader-info .title{color:var(--gold);font-weight:600;margin-bottom:18px;}
 .leader-info p{color:#4b5563;margin-bottom:18px;}
 .leader-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;}
-.leader-meta a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;background:#f5f5f7;color:var(--navy);font-weight:600;font-size:.9rem;transition:all .3s;}
+.leader-meta a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;background:#f5f5f7;color:var(--navy);font-weight:600;font-size:.9rem;transition:all .3s;cursor:pointer;}
 .leader-meta a:hover{background:var(--navy);color:#fff;transform:translateY(-2px);}
 .leader-meta a.wa:hover{background:var(--wa);color:#fff;}
 
@@ -164,25 +164,22 @@ section.block{padding:100px 0;}
 .contact-item a{color:#fff;font-weight:500;}
 .contact-item a:hover{color:var(--gold-soft);}
 
-.phone-panel{background:#fff;border-radius:var(--radius);padding:36px;border:1px solid #eef0f3;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px;}
-.phone-head h3{color:var(--navy);font-size:1.4rem;margin-bottom:6px;}
-.phone-head p{color:var(--gray);font-size:.95rem;}
-.phone-card{border:1px solid #eef0f3;border-radius:14px;padding:20px;background:#fafbfc;transition:all .3s;}
-.phone-card:hover{border-color:var(--teal);box-shadow:0 10px 26px rgba(11,30,63,.08);transform:translateY(-2px);background:#fff;}
-.phone-top{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
-.phone-flag{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(11,30,63,.08),rgba(26,188,156,.12));color:var(--navy);display:grid;place-items:center;font-size:1.25rem;flex-shrink:0;}
-.phone-meta{display:flex;flex-direction:column;}
-.phone-region{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:4px;}
-.phone-number{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:700;color:var(--navy);letter-spacing:.5px;}
-.phone-number:hover{color:var(--gold);}
-.phone-actions{display:flex;gap:10px;flex-wrap:wrap;}
-.phone-btn{flex:1;min-width:140px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:10px;font-weight:600;font-size:.92rem;transition:all .3s;}
-.phone-btn.call{background:var(--navy);color:#fff;}
-.phone-btn.call:hover{background:#13284f;transform:translateY(-2px);}
-.phone-btn.whatsapp{background:var(--wa);color:#fff;box-shadow:0 8px 18px rgba(37,211,102,.25);}
-.phone-btn.whatsapp:hover{background:#1ebd5b;transform:translateY(-2px);box-shadow:0 12px 24px rgba(37,211,102,.35);}
-.phone-note{margin-top:6px;padding:14px 16px;border-radius:10px;background:rgba(37,211,102,.08);color:#0f7a3d;font-size:.9rem;font-weight:500;display:flex;align-items:center;gap:8px;}
-.phone-note i{color:var(--wa);font-size:1.05rem;}
+.wa-panel{background:#fff;border-radius:var(--radius);padding:36px;border:1px solid #eef0f3;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px;}
+.wa-head h3{color:var(--navy);font-size:1.4rem;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.wa-head h3 i{color:var(--wa);}
+.wa-head p{color:var(--gray);font-size:.95rem;}
+.wa-card{border:1px solid #eef0f3;border-radius:14px;padding:22px;background:#fafbfc;transition:all .3s;display:flex;flex-direction:column;gap:16px;}
+.wa-card:hover{border-color:var(--wa);box-shadow:0 10px 26px rgba(37,211,102,.15);transform:translateY(-2px);background:#fff;}
+.wa-top{display:flex;align-items:center;gap:14px;}
+.wa-flag{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(11,30,63,.08),rgba(37,211,102,.15));color:var(--navy);display:grid;place-items:center;font-size:1.25rem;flex-shrink:0;}
+.wa-meta{display:flex;flex-direction:column;}
+.wa-region{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--wa);margin-bottom:4px;}
+.wa-sub{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;color:var(--navy);}
+.wa-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:12px;font-weight:600;font-size:.98rem;transition:all .3s;background:var(--wa);color:#fff;box-shadow:0 8px 18px rgba(37,211,102,.25);width:100%;cursor:pointer;}
+.wa-btn i{font-size:1.2rem;}
+.wa-btn:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 12px 24px rgba(37,211,102,.35);}
+.wa-note{margin-top:6px;padding:14px 16px;border-radius:10px;background:rgba(37,211,102,.08);color:#0f7a3d;font-size:.9rem;font-weight:500;display:flex;align-items:center;gap:8px;}
+.wa-note i{color:var(--wa);font-size:1.05rem;}
 
 /* FOOTER */
 footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;}
@@ -190,16 +187,17 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
 .foot-grid h4{color:#fff;font-size:1rem;margin-bottom:18px;}
 .foot-grid p,.foot-grid li{font-size:.93rem;color:rgba(255,255,255,.65);}
 .foot-grid li{margin-bottom:10px;}
+.foot-grid li a{cursor:pointer;}
 .foot-grid li a:hover{color:var(--gold-soft);}
 .foot-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.4rem;margin-bottom:14px;font-family:'Space Grotesk';}
 .socials{display:flex;gap:10px;margin-top:18px;}
-.socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:#fff;transition:all .3s;}
+.socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:#fff;transition:all .3s;cursor:pointer;}
 .socials a:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);}
 .socials a.wa:hover{background:var(--wa);color:#fff;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:.85rem;color:rgba(255,255,255,.55);}
 
 /* FLOATING WHATSAPP */
-.fab-wa{position:fixed;bottom:24px;right:24px;z-index:900;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;font-size:1.7rem;display:grid;place-items:center;box-shadow:0 14px 30px rgba(37,211,102,.45);transition:all .3s;}
+.fab-wa{position:fixed;bottom:24px;right:24px;z-index:900;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;font-size:1.7rem;display:grid;place-items:center;box-shadow:0 14px 30px rgba(37,211,102,.45);transition:all .3s;cursor:pointer;}
 .fab-wa:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 18px 36px rgba(37,211,102,.55);}
 .fab-wa::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,.45);animation:pulse 2.2s ease-out infinite;}
 @keyframes pulse{0%{transform:scale(.9);opacity:.8;}100%{transform:scale(1.4);opacity:0;}}
@@ -228,7 +226,6 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
   .foot-grid{grid-template-columns:1fr;}
   section.block{padding:70px 0;}
   .leader-info{padding:26px;}
-  .phone-btn{min-width:0;flex:1;}
   .fab-wa{width:52px;height:52px;font-size:1.5rem;bottom:18px;right:18px;}
 }
 </style>
@@ -417,7 +414,7 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
         <p>Based in Dublin, Ireland, with a global remit across all Tekwarden delivery regions.</p>
         <div class="leader-meta">
           <a href="mailto:dasun.lokuhetty@telwarden.com" aria-label="Email Dasun Lokuhetty"><i class="fa-solid fa-envelope"></i> dasun.lokuhetty@telwarden.com</a>
-          <a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp Dasun"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" data-wa="ie" rel="noopener" class="wa" aria-label="WhatsApp Dasun"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           <a href="#contact" aria-label="Contact Dasun"><i class="fa-solid fa-comments"></i> Get in touch</a>
         </div>
       </div>
@@ -425,13 +422,13 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
   </div>
 </section>
 
-<!-- CONTACT (info + phones + WhatsApp, NO form) -->
+<!-- CONTACT -->
 <section class="block" id="contact">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Contact Us</span>
       <h2>Let's build something exceptional together.</h2>
-      <p>Reach out anytime — by email, phone, or WhatsApp. Our team is available around the clock across the globe.</p>
+      <p>Reach out anytime — by email or WhatsApp. Our team is available around the clock across the globe.</p>
     </div>
 
     <div class="contact-wrap">
@@ -445,41 +442,39 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
         <div class="contact-item"><i class="fa-solid fa-clock"></i><div><div style="font-weight:600;color:#fff;">Support</div><span>24×7 · Follow-the-sun</span></div></div>
       </div>
 
-      <div class="phone-panel reveal">
-        <div class="phone-head">
-          <h3>Call or WhatsApp Us</h3>
-          <p>Reach our leadership directly across two regions.</p>
+      <div class="wa-panel reveal">
+        <div class="wa-head">
+          <h3><i class="fa-brands fa-whatsapp"></i> Chat with us on WhatsApp</h3>
+          <p>Pick your region and start a secure conversation instantly.</p>
         </div>
 
-        <div class="phone-card">
-          <div class="phone-top">
-            <div class="phone-flag"><i class="fa-solid fa-earth-europe"></i></div>
-            <div class="phone-meta">
-              <span class="phone-region">Ireland</span>
-              <a href="tel:+353857827144" class="phone-number">+353 85 782 7144</a>
+        <div class="wa-card">
+          <div class="wa-top">
+            <div class="wa-flag"><i class="fa-solid fa-earth-europe"></i></div>
+            <div class="wa-meta">
+              <span class="wa-region">Ireland</span>
+              <span class="wa-sub">Ireland &amp; EMEA enquiries</span>
             </div>
           </div>
-          <div class="phone-actions">
-            <a href="tel:+353857827144" class="phone-btn call"><i class="fa-solid fa-phone"></i> Call</a>
-            <a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="phone-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          </div>
+          <a href="#" data-wa="ie" rel="noopener" class="wa-btn" aria-label="Chat with Tekwarden Ireland on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
         </div>
 
-        <div class="phone-card">
-          <div class="phone-top">
-            <div class="phone-flag"><i class="fa-solid fa-earth-asia"></i></div>
-            <div class="phone-meta">
-              <span class="phone-region">Sri Lanka</span>
-              <a href="tel:+94786294688" class="phone-number">+94 78 629 4688</a>
+        <div class="wa-card">
+          <div class="wa-top">
+            <div class="wa-flag"><i class="fa-solid fa-earth-asia"></i></div>
+            <div class="wa-meta">
+              <span class="wa-region">Sri Lanka</span>
+              <span class="wa-sub">Sri Lanka &amp; APAC enquiries</span>
             </div>
           </div>
-          <div class="phone-actions">
-            <a href="tel:+94786294688" class="phone-btn call"><i class="fa-solid fa-phone"></i> Call</a>
-            <a href="https://wa.me/94786294688" target="_blank" rel="noopener" class="phone-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          </div>
+          <a href="#" data-wa="lk" rel="noopener" class="wa-btn" aria-label="Chat with Tekwarden Sri Lanka on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
         </div>
 
-        <div class="phone-note"><i class="fa-brands fa-whatsapp"></i> Tap WhatsApp to start a secure chat instantly — available 24×7.</div>
+        <div class="wa-note"><i class="fa-brands fa-whatsapp"></i> Tap WhatsApp to start a secure chat instantly — available 24×7.</div>
       </div>
     </div>
   </div>
@@ -495,7 +490,7 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
         <div class="socials">
           <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" data-wa="ie" rel="noopener" class="wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="mailto:dasun.lokuhetty@telwarden.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
@@ -524,8 +519,8 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
           <li>Dublin, Ireland</li>
           <li>USA · Europe · Asia</li>
           <li><a href="mailto:dasun.lokuhetty@telwarden.com">dasun.lokuhetty@telwarden.com</a></li>
-          <li><a href="tel:+353857827144">+353 85 782 7144</a></li>
-          <li><a href="tel:+94786294688">+94 78 629 4688</a></li>
+          <li><a href="#" data-wa="ie" rel="noopener">WhatsApp Ireland</a></li>
+          <li><a href="#" data-wa="lk" rel="noopener">WhatsApp Sri Lanka</a></li>
         </ul>
       </div>
     </div>
@@ -534,9 +529,10 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.75);padding:70px 0 28px;
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/353857827144" target="_blank" rel="noopener" class="fab-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="#" data-wa="ie" rel="noopener" class="fab-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
+/* ===== Standard interactivity ===== */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) navbar.classList.add('scrolled');
@@ -578,7 +574,7 @@ const counterObs = new IntersectionObserver((entries) => {
     const tick = () => {
       current += step;
       if (current >= target) {
-        if (target === 24) el.textContent = '24×7';
+        if (target === 24) el.textContent = '24\u00D77';
         else el.textContent = target + '+';
       } else {
         el.textContent = current;
@@ -592,6 +588,57 @@ const counterObs = new IntersectionObserver((entries) => {
 counters.forEach(c => counterObs.observe(c));
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* =======================================================
+   WHATSAPP LINK OBFUSCATION (anti-scraping)
+   Numbers are stored as split base64 of the reversed digit
+   string. Bots scraping raw HTML never see a phone number.
+   Links are only resolved at click-time and never written
+   back to the DOM as href values.
+======================================================= */
+(function(){
+  // Each entry: two halves of base64( reversed(number) )
+  const _parts = {
+    ie: ['NDQxNzI4', 'NzU4MzUz'],
+    lk: ['ODg2NDky', 'Njg3NDk=']
+  };
+
+  function _decode(key){
+    const p = _parts[key];
+    if(!p) return null;
+    try {
+      // atob -> reverse -> rejoin
+      const decoded = atob(p[0] + p[1]);
+      return decoded.split('').reverse().join('');
+    } catch(e){ return null; }
+  }
+
+  function _openWa(key){
+    const num = _decode(key);
+    if(!num) return;
+    // Build URL only in memory, never set as href
+    const url = 'https://wa.me/' + num;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('[data-wa]').forEach(function(el){
+      el.addEventListener('click', function(ev){
+        ev.preventDefault();
+        _openWa(el.getAttribute('data-wa'));
+      });
+      // Light visual hint
+      el.setAttribute('role','button');
+      el.setAttribute('tabindex','0');
+      el.addEventListener('keydown', function(ev){
+        if(ev.key === 'Enter' || ev.key === ' '){
+          ev.preventDefault();
+          _openWa(el.getAttribute('data-wa'));
+        }
+      });
+    });
+  });
+})();
 </script>
 </body>
 </html>
